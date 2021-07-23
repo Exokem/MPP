@@ -7,9 +7,11 @@ import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
-import net.minecraft.world.gen.foliage.DarkOakFoliagePlacer;
+import net.minecraft.world.gen.foliage.*;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
+import net.minecraft.world.gen.trunk.BendingTrunkPlacer;
 import net.minecraft.world.gen.trunk.DarkOakTrunkPlacer;
+import net.minecraft.world.gen.trunk.MegaJungleTrunkPlacer;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.OptionalInt;
@@ -22,11 +24,11 @@ public class LargeOakTreeSaplingGenerator extends LargeTreeSaplingGenerator
         public static final TreeFeatureConfig LARGE_OAK_CONFIG = new TreeFeatureConfig.Builder
             (
                 new SimpleBlockStateProvider(Blocks.OAK_LOG.getDefaultState()),
-                new DarkOakTrunkPlacer(6, 2, 1),
+                new GreatOakTrunkPlacer(12, 2, 1),
                 new SimpleBlockStateProvider(Blocks.OAK_LEAVES.getDefaultState()),
                 new SimpleBlockStateProvider(Blocks.OAK_SAPLING.getDefaultState()),
-                new DarkOakFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0)),
-                new ThreeLayersFeatureSize(1, 1, 0, 1, 2,OptionalInt.empty())
+                new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
+                new ThreeLayersFeatureSize(1, 4, 0, 1, 2,OptionalInt.empty())
             ).ignoreVines().build();
 
         public static final ConfiguredFeature<TreeFeatureConfig, ?> LARGE_OAK = register("large_oak", Feature.TREE.configure(LARGE_OAK_CONFIG));

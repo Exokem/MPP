@@ -26,6 +26,8 @@ This mod may be partially or entirely incompatible with other mods that:
 + Override `UnbreakingEnchantment#getMaxLevel` or modify the maximum level of Unbreaking
 + Override `SaplingBlock#generate` or modify how saplings generate trees
 
+As per the license, however, you may create a variant of this mod using its source code that excludes any particular conflicting feature.
+
 ## License
 
 This template is available under the CC0 license.
