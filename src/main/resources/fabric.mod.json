@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "mpp",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Minecraft++",
+  "description": "",
   "authors": [
-    "Me!"
+    "Exokem"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -19,11 +19,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "MinecraftPlusPlus"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "mpp.mixins.json"
   ],
 
   "depends": {
