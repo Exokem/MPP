@@ -12,6 +12,7 @@ Included are the following changes:
     + Protection limit: `IV -> V`
     + Infinity can now be combined with Mending
     + Standard Protection can now be combined with a single specialized Protection, but specialized Protection enchantments remain incompatible with one another
+    + Anvils will no longer prevent combinations whose costs reach or exceed 40 levels
 2. Trees
     + It is now possible to grow large oak trees (using bone meal only) which are similar in appearance to dark oak trees
 
@@ -25,6 +26,8 @@ This mod may be partially or entirely incompatible with other mods that:
 + Override `ProtectionEnchantment#canAccept`, `ProtectionEnchantment#getMaxLevel` or modify which enchantments are compatible with Protection or its maximum level
 + Override `UnbreakingEnchantment#getMaxLevel` or modify the maximum level of Unbreaking
 + Override `SaplingBlock#generate` or modify how saplings generate trees
++ Override `AnvilScreen#drawForeground` or modify how the anvil gui is rendered
++ Override `AnvilScreenHandler#updateResult` or modify how the anvil decides combination results
 
 As per the license, however, you may create a variant of this mod using its source code that excludes any particular conflicting feature.
 
