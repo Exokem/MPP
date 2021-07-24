@@ -16,8 +16,9 @@ public class InfinityEnchantmentMixin extends Enchantment
         super(weight, EnchantmentTarget.BOW, slotTypes);
     }
 
-    public boolean canAccept(Enchantment other)
+    @Inject(method = "canAccept(Lnet/minecraft/enchantment/Enchantment;)Z", at = @At("HEAD"), cancellable = true)
+    public void canAccept(Enchantment other, CallbackInfoReturnable<Boolean> cir)
     {
-        return super.canAccept(other);
+        cir.setReturnValue(super.canAccept(other));
     }
 }
