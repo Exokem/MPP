@@ -4,6 +4,7 @@
 
 This mod aims to adjust some seemingly arbitrary limits imposed by the vanilla experience.  
 It also adds some new features.  
+More than anything else though, __this mod is a vanilla expansion__ so you shouldn't complain when it doesn't work in your hundred mod pack.  
 
 Included are the following changes:  
 
