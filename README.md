@@ -52,4 +52,4 @@ In most cases, this should be as easy as removing a line or two from resources/m
 
 ## License
 
-This template is available under the CC0 license.
+This mod is available under the CC0 license.
