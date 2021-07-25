@@ -19,6 +19,7 @@ Included are the following changes:
     + It is now possible to grow large oak trees (using bone meal only) which are similar in appearance to dark oak trees
 3. Mobs
     + The Elder Guardian mining fatigue effect is much less severe: Level `III -> II` and Duration `5:00 -> 1:30`
+    + The Shulker levitation effect is much less severe: Duration `0:10 -> 0:03`
 
 ## Incompatibilities
 
@@ -33,6 +34,8 @@ This mod may be partially or entirely incompatible with other mods that:
 + Override `AnvilScreen#drawForeground` or modify how the anvil gui is rendered
 + Override `AnvilScreenHandler#updateResult` or modify how the anvil decides combination results
 + Modify in any way `GrindstoneScreenHandler` or attempt to overhaul the functionality of the grindstone
++ Override `ElderGuardianEntity#mobTick` or modify the behavior of Elder Guardian entities
++ Override `ShulkerBulletEntity#onEntityHit` or modify the behavior of Shulker projectiles
 
 As per the license, however, you may create a variant of this mod using its source code that excludes any particular conflicting feature.
 
