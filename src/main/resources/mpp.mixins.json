@@ -12,6 +12,7 @@
     "SaplingBlockMixin",
     "ShulkerBulletEntityMixin",
     "UnbreakingEnchantmentMixin",
+    "ZombieEntityMixin",
     "grindstone.GrindstoneScreenHandlerMixin"
   ],
   "client": [

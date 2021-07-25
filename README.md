@@ -20,6 +20,7 @@ Included are the following changes:
 3. Mobs
     + The Elder Guardian mining fatigue effect is much less severe: Level `III -> II` and Duration `5:00 -> 1:30`
     + The Shulker levitation effect is much less severe: Duration `0:10 -> 0:03`
+    + Villagers will now always be converted to Zombie Villagers when killed by any Zombie, regardless of difficulty
 
 ## Incompatibilities
 
@@ -36,8 +37,10 @@ This mod may be partially or entirely incompatible with other mods that:
 + Modify in any way `GrindstoneScreenHandler` or attempt to overhaul the functionality of the grindstone
 + Override `ElderGuardianEntity#mobTick` or modify the behavior of Elder Guardian entities
 + Override `ShulkerBulletEntity#onEntityHit` or modify the behavior of Shulker projectiles
++ Override `ZombieEntity#onKilledOther` or modify the behavior of any Zombies when they kill another entity
 
 As per the license, however, you may create a variant of this mod using its source code that excludes any particular conflicting feature.
+In most cases, this should be as easy as removing a line or two from resources/mpp.mixins.json, giving the mod a quick test, and rebuilding the jar.
 
 ## License
 
