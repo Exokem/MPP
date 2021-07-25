@@ -6,6 +6,7 @@
   "mixins": [
     "AnvilScreenHandlerMixin",
     "AnvilScreenMixin",
+    "ElderGuardianEntityMixin",
     "InfinityEnchantmentMixin",
     "ProtectionEnchantmentMixin",
     "SaplingBlockMixin",
