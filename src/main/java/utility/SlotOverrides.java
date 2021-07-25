@@ -9,19 +9,14 @@ import net.minecraft.inventory.Inventory;
 import net.minecraft.item.EnchantedBookItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.nbt.NbtElement;
-import net.minecraft.screen.GrindstoneScreenHandler;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Optional;
-import java.util.function.BiFunction;
 
 public class SlotOverrides
 {
@@ -93,8 +88,8 @@ public class SlotOverrides
             private int getExperience(World world)
             {
                 int ix = 0;
-                int i = ix + this.getExperience(inventory.getStack(0));
-                i += this.getExperience(inventory.getStack(1));
+                int i = ix + this.getExperience(input.getStack(0));
+                i += this.getExperience(input.getStack(1));
 
                 if (i > 0)
                 {

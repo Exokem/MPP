@@ -55,6 +55,7 @@ public class GrindstoneScreenHandlerMixin extends ScreenHandler
         {
             ItemStack resultStack = this.grind(main, main.getDamage(), main.getCount());
             this.result.setStack(0, resultStack);
+            this.sendContentUpdates();
             ci.cancel();
         }
     }
