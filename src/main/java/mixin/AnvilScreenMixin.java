@@ -33,6 +33,12 @@ public class AnvilScreenMixin extends ForgingScreen<AnvilScreenHandler>
         if (i > 0) {
             int j = 8453920;
             Object text3;
+
+//            if (i >= 40 && !this.client.player.getAbilities().creativeMode) {
+//                text3 = TOO_EXPENSIVE_TEXT;
+//                j = 16736352;
+//            } else
+
             if (!((AnvilScreenHandler)this.handler).getSlot(2).hasStack()) {
                 text3 = null;
             } else {
@@ -48,6 +54,5 @@ public class AnvilScreenMixin extends ForgingScreen<AnvilScreenHandler>
                 this.textRenderer.drawWithShadow(matrices, (Text)text3, (float)k, 69.0F, j);
             }
         }
-
     }
 }

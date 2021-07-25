@@ -12,13 +12,8 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ElderGuardianEntity.class)
-public class ElderGuardianEntityMixin extends GuardianEntity
+public class ElderGuardianEntityMixin
 {
-    public ElderGuardianEntityMixin(EntityType<? extends GuardianEntity> entityType, World world)
-    {
-        super(entityType, world);
-    }
-
     @ModifyArg
     (
         method = "mobTick",

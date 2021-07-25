@@ -19,37 +19,8 @@ import world.LargeOakTreeSaplingGenerator;
 import java.util.Random;
 
 @Mixin(SaplingBlock.class)
-public class SaplingBlockMixin extends PlantBlock implements Fertilizable
+public class SaplingBlockMixin
 {
-    @Shadow
-    public static IntProperty STAGE;
-
-    @Shadow
-    private SaplingGenerator generator;
-
-    protected SaplingBlockMixin(Settings settings)
-    {
-        super(settings);
-    }
-
-    @Shadow
-    public boolean isFertilizable(BlockView world, BlockPos pos, BlockState state, boolean isClient)
-    {
-        return false;
-    }
-
-    @Shadow
-    public boolean canGrow(World world, Random random, BlockPos pos, BlockState state)
-    {
-        return false;
-    }
-
-    @Shadow
-    public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state)
-    {
-
-    }
-
     @Inject
     (
         method = "generate(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Ljava/util/Random;)V",
@@ -57,7 +28,7 @@ public class SaplingBlockMixin extends PlantBlock implements Fertilizable
     )
     public void injectGenerate(ServerWorld world, BlockPos pos, BlockState state, Random random, CallbackInfo ci)
     {
-        if (state.get(STAGE) != 0 && state.getBlock().equals(Blocks.OAK_SAPLING))
+        if (state.get(SaplingBlock.STAGE) != 0 && state.getBlock().equals(Blocks.OAK_SAPLING))
         {
             LargeOakTreeSaplingGenerator.GENERATOR.generate
                 (
