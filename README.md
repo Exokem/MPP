@@ -41,11 +41,11 @@ This mod may be partially or entirely incompatible with other mods that:
 + Override `SaplingBlock#generate` or modify how saplings generate trees
 + Override `AnvilScreen#drawForeground` or modify how the anvil gui is rendered
 + Override `AnvilScreenHandler#updateResult` or modify how the anvil decides combination results
-+ Modify in any way `GrindstoneScreenHandler` or attempt to overhaul the functionality of the grindstone
 + Override `ElderGuardianEntity#mobTick` or modify the behavior of Elder Guardian entities
 + Override `ShulkerBulletEntity#onEntityHit` or modify the behavior of Shulker projectiles
 + Override `ZombieEntity#onKilledOther` or modify the behavior of any Zombies when they kill another entity
 + Override `CompassItem#useOnBlock` or modify the functionality of the Compass item
++ Modify in any way `GrindstoneScreenHandler` or attempt to overhaul the functionality of the grindstone
 
 As per the license, however, you may create a variant of this mod using its source code that excludes any particular conflicting feature.
 In most cases, this should be as easy as removing a line or two from resources/mpp.mixins.json, giving the mod a quick test, and rebuilding the jar.
